@@ -14,7 +14,7 @@ export interface InputProps {
   variant?: "filled" | "outlined" | "ghost";
   size?: "sm" | "md" | "lg";
   type?: "text" | "password" | "email";
-  clearable?: boolean; // new
+  clearable?: boolean; 
 }
 
 const Input: React.FC<InputProps> = ({
@@ -33,14 +33,14 @@ const Input: React.FC<InputProps> = ({
 }) => {
   const [showPassword, setShowPassword] = useState(false);
 
-  // Size styles
+
   const sizeClasses = {
     sm: "px-2 py-1 text-sm",
     md: "px-3 py-2 text-base",
     lg: "px-4 py-3 text-lg",
   };
 
-  // Variant styles
+  
   const variantClasses = {
     filled: "bg-gray-100 border border-transparent focus:border-blue-500",
     outlined: "border border-gray-300 focus:border-blue-500",
@@ -72,7 +72,6 @@ const Input: React.FC<InputProps> = ({
           )}
         />
 
-        {/* Password toggle (👁️ / 👁️‍🗨️) */}
         {isPassword && (
           <button
             type="button"
@@ -83,7 +82,7 @@ const Input: React.FC<InputProps> = ({
           </button>
         )}
 
-        {/* Clear button (❌) */}
+     
         {clearable && value && value.length > 0 && (
           <button
             type="button"
@@ -94,7 +93,7 @@ const Input: React.FC<InputProps> = ({
             }
             className={clsx(
               "absolute top-1/2 -translate-y-1/2",
-              isPassword ? "right-8" : "right-2", // shift if password toggle exists
+              isPassword ? "right-8" : "right-2", 
               "text-gray-500 hover:text-gray-700"
             )}
           >
