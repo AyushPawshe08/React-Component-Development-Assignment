@@ -1,4 +1,5 @@
 
+````markdown
 # ⚛️ React Components Library
 
 A React project showcasing **reusable UI components** — `Input` and `DataTable`.  
@@ -112,6 +113,29 @@ Configured in **`tailwind.config.js`** to scan files inside:
 
 ---
 
+## 🖼️ Screenshots
+
+### 🔹 Input Component
+
+<img src="./screenshots/input-component.png" width="600" />
+
+* Supports multiple sizes (`sm`, `md`, `lg`)
+* Variants like `outlined`, `filled`, `ghost`
+* Extra features: helper text, error handling, password toggle, clear button
+
+---
+
+### 🔹 DataTable Component
+
+<img src="./screenshots/datatable-component.png" width="600" />
+
+* Displays data in a tabular format
+* Allows column-based sorting
+* Includes row selection (checkboxes)
+* Fully accessible with `aria-label`
+
+---
+
 ## 🧠 Approach
 
 * Built **modular & reusable components** for consistency
@@ -122,5 +146,11 @@ Configured in **`tailwind.config.js`** to scan files inside:
 
 ---
 
+## 🌐 Deployment
+
+* **Vercel App (demo page):** [https://react-component-development-assignm-three.vercel.app/](https://react-component-development-assignm-three.vercel.app/)
+* **Storybook (Chromatic preview):** [https://www.chromatic.com/setup?appId=68a8bcc6ccbb98aa6eabc93a](https://www.chromatic.com/setup?appId=68a8bcc6ccbb98aa6eabc93a)
+
+---
 
 
