@@ -117,7 +117,8 @@ Configured in **`tailwind.config.js`** to scan files inside:
 
 ### 🔹 Input Component
 
-<img src="./screenshots/input-component.png" width="600" />
+<img width="1890" height="851" alt="Screenshot 2025-08-23 001935" src="https://github.com/user-attachments/assets/dc10fd82-d90c-4023-a70a-dd77cdf92194" />
+
 
 * Supports multiple sizes (`sm`, `md`, `lg`)
 * Variants like `outlined`, `filled`, `ghost`
@@ -127,7 +128,8 @@ Configured in **`tailwind.config.js`** to scan files inside:
 
 ### 🔹 DataTable Component
 
-<img src="./screenshots/datatable-component.png" width="600" />
+<img width="1033" height="313" alt="Screenshot 2025-08-23 001947" src="https://github.com/user-attachments/assets/9e0e1f35-e7b9-4d6e-8bad-47afea055f2b" />
+
 
 * Displays data in a tabular format
 * Allows column-based sorting
