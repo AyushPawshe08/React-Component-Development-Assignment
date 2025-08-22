@@ -1,46 +1,119 @@
-# Getting Started with Create React App
+Perfect 🚀 I’ll draft a clean **README.md** for your repo that matches your folder structure, setup, and assignment requirements.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Here’s the content you can drop directly into `README.md` at the root of your project:
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+# React Component Assignment
 
-### `npm start`
+## 📂 Folder Structure
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+```
+reactcomponent/
+ ├── src/
+ │    ├── DataTable/
+ │    │    └── Table.tsx
+ │    ├── InputComponent/
+ │    │    └── Input.tsx
+ │    ├── __tests__/                
+ │    │    ├── Table.test.tsx
+ │    │    └── App.test.tsx
+ │    ├── stories/                  
+ │    │    ├── Button.stories.tsx
+ │    │    ├── Header.stories.tsx
+ │    │    ├── Input.stories.tsx
+ │    │    ├── Page.stories.tsx
+ │    │    ├── Table.stories.tsx
+ │    │    └── assets/
+ │    ├── App.tsx
+ │    ├── App.css
+ │    ├── index.tsx
+ │    └── index.css
+ ├── README.md
+ ├── package.json
+ ├── tsconfig.json
+ ├── vite.config.ts
+ └── ...
+```
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+---
 
-### `npm test`
+## ⚙️ Setup Instructions
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+1. **Clone the Repository**
 
-### `npm run build`
+   ```bash
+   git clone <your-repo-url>
+   cd reactcomponent
+   ```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+2. **Install Dependencies**
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+   ```bash
+   npm install
+   ```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+3. **Run the App (Vite)**
 
-### `npm run eject`
+   ```bash
+   npm run dev
+   ```
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+   The app will be available at **[http://localhost:5173/](http://localhost:5173/)** (default Vite port).
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+4. **Run Storybook**
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+   ```bash
+   npm run storybook
+   ```
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+   Opens Storybook on **[http://localhost:6006/](http://localhost:6006/)**
 
-## Learn More
+5. **Run Tests (Jest + React Testing Library)**
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+   ```bash
+   npm test
+   ```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+---
+
+## 📖 Description of the Approach
+
+* **Component Structure**:
+
+  * Created **reusable components** (`Input`, `Table`) inside dedicated folders for modularity.
+  * Each component is separated to keep the code **clean and maintainable**.
+
+* **Testing**:
+
+  * Used **Jest & React Testing Library** for unit testing.
+  * All test files are placed in `src/__tests__/` to maintain separation from main code.
+
+* **Storybook**:
+
+  * Configured **Storybook** for interactive component testing.
+  * Stories (`.stories.tsx`) demonstrate each component’s usage.
+
+* **Styling**:
+
+  * CSS modules & separate stylesheets are used (`.css` files inside `assets/`).
+
+* **Tools & Frameworks**:
+
+  * **React + TypeScript** (for type safety and modular code).
+  * **Vite** (for fast bundling and development).
+  * **Storybook** (for component visualization).
+  * **Jest + React Testing Library** (for testing).
+
+---
+
+✅ With this README, your professor/reviewer will see:
+
+* Proper folder structure.
+* How to run the project, storybook, and tests.
+* A clear explanation of your approach.
+
+---
+
+Do you also want me to include **sample output screenshots (Table + Input + Storybook)** section in the README so it looks more professional for submission?
+
