@@ -7,7 +7,7 @@ export interface Column<T> {
   title: string;
   dataIndex: keyof T;
   sortable?: boolean;
-  render?: (value: any, row: T) => React.ReactNode; // optional custom cell
+  render?: (value: any, row: T) => React.ReactNode; 
 }
 
 export interface DataTableProps<T extends { id?: string | number }> {
@@ -15,13 +15,13 @@ export interface DataTableProps<T extends { id?: string | number }> {
   columns: Column<T>[];
   loading?: boolean;
   selectable?: boolean;
-  /** default: "multiple" */
+ 
   selectionMode?: "single" | "multiple";
   onRowSelect?: (selectedRows: T[]) => void;
   emptyMessage?: string;
-  /** Optional aria-label for table */
+ 
   "aria-label"?: string;
-  /** Optional className passthrough */
+ 
   className?: string;
 }
 
@@ -32,7 +32,7 @@ type SortState<T> = {
 } | null;
 
 function getValue<T>(row: T, key: keyof T) {
-  // @ts-ignore - allow index access
+
   return row[key];
 }
 
@@ -50,7 +50,7 @@ export function DataTable<T extends { id?: string | number }>({
   const [sort, setSort] = useState<SortState<T>>(null);
   const [selectedKeys, setSelectedKeys] = useState<Array<string | number>>([]);
 
-  // derive a stable row key
+
   const rowKey = (row: T, idx: number) =>
     (row.id as string | number | undefined) ?? idx;
 
@@ -61,7 +61,7 @@ export function DataTable<T extends { id?: string | number }>({
     copy.sort((a, b) => {
       const va = getValue(a, dataIndex!);
       const vb = getValue(b, dataIndex!);
-      // Basic comparator that handles string/number/dates
+      
       const na = va instanceof Date ? va.getTime() : va;
       const nb = vb instanceof Date ? vb.getTime() : vb;
       if (na < nb) return direction === "asc" ? -1 : 1;
@@ -105,20 +105,19 @@ export function DataTable<T extends { id?: string | number }>({
       setSelectedKeys((prev) => (prev.includes(key) ? [] : [key]));
       return;
     }
-    // multiple
+    
     setSelectedKeys((prev) =>
       prev.includes(key) ? prev.filter((k) => k !== key) : [...prev, key]
     );
   };
 
-  // inform parent when selection changes
   useEffect(() => {
     if (!onRowSelect) return;
     const selectedRows = sortedData.filter((r, i) =>
       selectedKeys.includes(rowKey(r, i))
     );
     onRowSelect(selectedRows);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
+    
   }, [selectedKeys, sortedData]);
 
   return (
