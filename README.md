@@ -1,5 +1,4 @@
 
-```markdown
 # ⚛️ React Components Library
 
 A React project showcasing **reusable UI components** — `Input` and `DataTable`.  
@@ -9,24 +8,31 @@ Styled with **Tailwind CSS**, documented in **Storybook**, and tested using **Je
 
 ## 📂 Folder Structure
 
-```
-
-src/
-├── components/
-│   ├── DataTable/
-│   │   ├── DataTable.tsx       # Table component
-│   │   └── DataTable.test.tsx  # Unit tests for DataTable
-│   ├── InputComponent/
-│   │   └── Input.tsx           # Input component
+```bash
+reactcomponent/
+├── node_modules/
+├── public/
+├── src/
+│   ├── components/
+│   │   ├── DataTable/
+│   │   │   ├── DataTable.tsx       # Table component
+│   │   │   └── DataTable.test.tsx  # Unit tests for DataTable
+│   │   ├── InputComponent/
+│   │   │   └── Input.tsx           # Input component
+│   │
+│   ├── stories/
+│   │   ├── Input.stories.tsx       # Storybook for Input
+│   │   └── DataTable.stories.tsx   # Storybook for DataTable
+│   │
+│   ├── App.tsx                     # Demo page showcasing components
+│   ├── App.test.tsx                # Default CRA test
+│   ├── index.tsx                   # App entry point
+│   └── index.css                   # Global styles
 │
-├── stories/                    # Storybook stories
-│   ├── Input.stories.tsx
-│   └── DataTable.stories.tsx
-│
-├── App.tsx                     # Demo page showcasing components
-├── App.test.tsx                # Default CRA test
-└── index.tsx                   # App entry point
-
+├── tailwind.config.js              # Tailwind config
+├── postcss.config.js               # PostCSS config
+├── package.json
+└── README.md
 ````
 
 ---
@@ -34,11 +40,12 @@ src/
 ## ⚙️ Setup Instructions
 
 ### 1. Clone & Install
+
 ```bash
 git clone <your-repo-url>
 cd reactcomponent
 npm install
-````
+```
 
 ### 2. Run the App
 
@@ -77,7 +84,7 @@ npx tailwindcss init -p
 
 Configured in **`tailwind.config.js`** to scan files inside:
 
-```
+```bash
 ./src/**/*.{js,jsx,ts,tsx}
 ```
 
@@ -115,8 +122,5 @@ Configured in **`tailwind.config.js`** to scan files inside:
 
 ---
 
-```
-
----
 
 
