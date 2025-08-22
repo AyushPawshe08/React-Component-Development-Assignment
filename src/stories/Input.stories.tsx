@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react-webpack5";
-import Input from "../InputComponent/Input"; // ✅ This will pick Input.ts automatically
+import Input from "../InputComponent/Input"; 
 
 const meta: Meta<typeof Input> = {
   title: "UI/Input",
@@ -10,7 +10,7 @@ const meta: Meta<typeof Input> = {
 export default meta;
 type Story = StoryObj<typeof Input>;
 
-// ✅ Basic usage
+
 export const Default: Story = {
   args: {
     label: "Name",
@@ -18,7 +18,7 @@ export const Default: Story = {
   },
 };
 
-// ✅ Variants
+
 export const Variants: Story = {
   render: () => (
     <div style={{ display: "flex", flexDirection: "column", gap: "1rem", width: "20rem" }}>
@@ -29,7 +29,7 @@ export const Variants: Story = {
   )
 };
 
-// ✅ Sizes
+
 export const Sizes: Story = {
   render: () => (
     <div style={{ display: "flex", flexDirection: "column", gap: "1rem", width: "20rem" }}>
@@ -40,7 +40,7 @@ export const Sizes: Story = {
   )
 };
 
-// ✅ States
+
 export const States: Story = {
   render: () => (
     <div style={{ display: "flex", flexDirection: "column", gap: "1rem", width: "20rem" }}>
@@ -51,7 +51,7 @@ export const States: Story = {
   )
 };
 
-// ✅ Password + Clear Button
+
 export const WithExtras: Story = {
   args: {
     label: "Password",
